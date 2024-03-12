@@ -27,7 +27,7 @@ class InternetArchiveUploader():
             return []
         for result in searchIdentifiers.iter_as_items():
             return [file_name['name'] for file_name in result.files]
-    # upload file and upload directory need to be optionally async  
+        
     def uploadFile(self,file:str):
         files_in_archive=self.retrieveFilesFromInternetArchive()
         if(os.path.isdir(file) or file in files_in_archive):
@@ -39,7 +39,6 @@ class InternetArchiveUploader():
         files_in_archive=self.retrieveFilesFromInternetArchive()
         for file in os.listdir(dir_path):
             full_path=f'{dir_path}/{file}'
-            # If file is a directory or the file is already in the archive just skip it
             if(os.path.isdir(full_path) or file in files_in_archive):
                 continue
         
