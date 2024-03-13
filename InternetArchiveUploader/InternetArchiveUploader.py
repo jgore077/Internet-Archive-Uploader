@@ -30,7 +30,7 @@ class InternetArchiveUploader():
         
     def uploadFile(self,file:str):
         files_in_archive=self.retrieveFilesFromInternetArchive()
-        if(os.path.isdir(file) or file in files_in_archive):
+        if(os.path.isdir(file) or os.path.basename(file) in files_in_archive):
             return
         #try:
         r = self.item.upload(file, metadata=self.metadata, access_key=self.S3_ACCESS_KEY, secret_key=self.S3_SECRET_KEY,verbose=True)
@@ -39,7 +39,7 @@ class InternetArchiveUploader():
         files_in_archive=self.retrieveFilesFromInternetArchive()
         for file in os.listdir(dir_path):
             full_path=f'{dir_path}/{file}'
-            if(os.path.isdir(full_path) or file in files_in_archive):
+            if(os.path.isdir(full_path) or os.path.basename(file) in files_in_archive):
                 continue
         
             r = self.item.upload(full_path, metadata=self.metadata, access_key=self.S3_ACCESS_KEY, secret_key=self.S3_SECRET_KEY,verbose=True)
