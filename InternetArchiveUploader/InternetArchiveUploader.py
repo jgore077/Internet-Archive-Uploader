@@ -4,7 +4,7 @@ import os
 
 
 
-# add ability to write full tracebacks Done
+
 class InternetArchiveUploader():
     def __init__(self,identifier,base_metadata,username,password) -> None:
      
