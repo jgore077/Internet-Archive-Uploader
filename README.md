@@ -30,4 +30,4 @@ The metadata is a dictionary of metadata attributes with their values. You can l
 The password and username should be self explanatory.
 
 # Contributions
-If anyone uses this library and has issues or wants to contribute feel free to message me. I am willing to add extra features or do bug fixes. It should also be noted that I am using this package primarily to distribute my fcode for personal use and gain experience in publishing python packages.
+If anyone uses this library and has issues or wants to contribute feel free to message me. I am willing to add extra features or do bug fixes. It should also be noted that I am using this package primarily to distribute my code for personal use and gain experience in publishing python packages.
