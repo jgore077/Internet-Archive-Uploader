@@ -4,7 +4,7 @@
 # Usage
 To install the library
 ```
-pip install internetarchiveuploader
+pip install internet-archive-uploader
 ```
 To use the library
 

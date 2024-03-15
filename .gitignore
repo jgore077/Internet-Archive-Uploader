@@ -2,3 +2,4 @@
 .vscode
 internet_archive_uploader.egg-info
 dist
+config.ini
