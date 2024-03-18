@@ -1,3 +1,4 @@
+from math import e
 from internetarchive import get_item,ArchiveSession,Item,search_items,configure
 import configparser
 import os
@@ -7,8 +8,12 @@ import os
 
 class InternetArchiveUploader():
     def __init__(self,identifier,base_metadata,username,password) -> None:
-     
-        configure(username,password,config_file='config.ini')
+        try:
+            configure(username,password,config_file='config.ini')
+        except Exception as e:
+            if not os.path.exists('config.ini'):
+                raise ConnectionError('Internet Archive servers could not be contacted to configure your downloader')
+            
         config = configparser.ConfigParser()
         config.read('config.ini')
         self.S3_ACCESS_KEY=config['s3']['access'] 
