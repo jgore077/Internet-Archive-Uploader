@@ -1,4 +1,3 @@
-from math import e
 from internetarchive import get_item,ArchiveSession,Item,search_items,configure
 import configparser
 import os
