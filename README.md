@@ -9,7 +9,7 @@ pip install internet-archive-uploader
 To use the library
 
 ```python
-import InternetArchiveUploader
+from InternetArchiveUploader import InternetArchiveUploader
 
 uploader= InternetArchiveUploader(
   'myUniqueIdentifier',
