@@ -6,7 +6,7 @@ import setuptools
 
 setuptools.setup(
     name="internet-archive-uploader",
-    version="1.2.6",
+    version="1.2.7",
     description="A wrapper around the internetarchive package for uploading files and directorys",
     long_description=pathlib.Path("README.md").read_text(),
     long_description_content_type="text/markdown",
@@ -17,7 +17,7 @@ setuptools.setup(
     project_urls={
         
     },
-    python_requires=">=3.6,<=3.12",
+    python_requires=">=3.6,<=3.13",
     install_requires=[
         'internetarchive>=3.6.0'
     ],
