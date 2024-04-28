@@ -17,7 +17,7 @@ setuptools.setup(
     project_urls={
         
     },
-    python_requires=">=3.6,<3.12",
+    python_requires=">=3.6,<=3.12",
     install_requires=[
         'internetarchive>=3.6.0'
     ],
